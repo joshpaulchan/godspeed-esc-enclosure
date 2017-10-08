@@ -1,0 +1,23 @@
+
+include <constants.scad>
+
+use <cover.scad>
+use <level.scad>
+
+  translate([-(COVER_BASE_WIDTH)/2-LEVEL_HORIZONTAL_PADDING, -(COVER_BASE_LENGTH)/2-LEVEl_VERTICAL_PADDING, 0]) color("red") level(
+    w=COVER_BASE_WIDTH,
+    l=COVER_BASE_LENGTH,
+    t=COVER_BASE_THICKNESS,
+    hp=LEVEL_HORIZONTAL_PADDING,
+    vp=LEVEl_VERTICAL_PADDING
+  );
+  
+  cover(
+    ow=COVER_BASE_WIDTH,
+    ol=COVER_BASE_LENGTH,
+    ot=COVER_BASE_THICKNESS,
+    ihp=COVER_HORIZONTAL_PADDING,
+    ivp=COVER_VERTICAL_PADDING,
+    oh=COVER_HEIGHT,
+    ts=COVER_TOP_SCALE
+  );
